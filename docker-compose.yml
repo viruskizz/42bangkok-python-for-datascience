@@ -1,0 +1,8 @@
+
+services:
+  app:
+    build:
+      context: python-0
+      dockerfile: Dockerfile
+    volumes:
+      - ./python-0:/app
