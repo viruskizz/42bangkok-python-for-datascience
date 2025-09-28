@@ -44,10 +44,12 @@ def get_code(s: str) -> str:
     }
     return MORSE[s.upper()]
 
+
 def encoding(s: str) -> str:
     """ convert string to morse code string """
     codes = [get_code(c) for c in s]
     return " ".join(codes)
+
 
 def main():
     """ test function """

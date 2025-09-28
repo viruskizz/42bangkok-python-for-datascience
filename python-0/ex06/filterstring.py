@@ -2,12 +2,14 @@ import sys
 
 
 def my_filter(fn, lst):
+    """ filter list by function """
     if fn is None:
         return []
     return [x for x in lst if fn(x)]
 
 
 def filterstring(s: str, n: int):
+    """ filter string by len of word more than n """
     words = s.split(" ")
     return my_filter(lambda w: len(w) > n, words)
 
