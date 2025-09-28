@@ -4,16 +4,21 @@ all: up
 up:
 	docker-compose up -d --build
 
+down:
+	docker-compose down
+
 exec:
 	docker exec -it ${NAME}-app-1 /bin/bash
 
 rm-none:
-	docker rmi $(docker images -f "dangling=true" -q)
+	docker rmi $$(docker images -f "dangling=true" -q)
 
 rm-volumes:
 	-docker volume rm $(docker volume ls -qf "dangling=true")
 
-clean:
-	docker-compose down --rmi $(docker image "${NAME}-*" -q)
+rmi:
+	-docker image rm $$(docker image ls -q "${NAME}*")
 
-fclean: clean rm-none
+clean: down rmi
+
+fclean: clean rm-none rm-volumes

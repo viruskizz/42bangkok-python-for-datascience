@@ -2,7 +2,9 @@
 services:
   app:
     build:
-      context: python-0
+      # context: python-0
+      context: python-1
       dockerfile: Dockerfile
     volumes:
-      - ./python-0:/app
+      # - ./python-0:/app
+      - ./python-1:/app
