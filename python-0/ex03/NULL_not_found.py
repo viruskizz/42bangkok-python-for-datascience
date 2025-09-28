@@ -9,7 +9,7 @@ def NULL_not_found(object: any) -> int:
         print(f"Zero: {object} {t}")
     elif tn == "str" and object == "":
         print(f"Empty: {t}")
-    elif tn == "bool" and object == False:
+    elif tn == "bool" and object is False:
         print(f"Fake: {object} {t}")
     else:
         print("Type not Found")
