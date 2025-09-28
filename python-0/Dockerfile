@@ -11,4 +11,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+RUN alias=flake8
+
 CMD [ "sleep", "infinity" ]
