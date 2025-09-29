@@ -2,7 +2,7 @@ NAME=python-for-datascience
 all: up
 
 up:
-	docker-compose up -d --build
+	docker-compose up -d --build 
 
 down:
 	docker-compose down

@@ -5,6 +5,9 @@ services:
       # context: python-0
       context: python-1
       dockerfile: Dockerfile
+    environment:
+      - DISPLAY=:0 # for home
     volumes:
       # - ./python-0:/app
       - ./python-1:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix
