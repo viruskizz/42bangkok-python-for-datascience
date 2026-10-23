@@ -1,0 +1,11 @@
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DISPLAY=:0 # for home
+    volumes:
+      - ./:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix

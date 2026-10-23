@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+
+# Package build artifacts
+build/
+dist/
+*.egg-info/
+
+# Subject PDFs
+*.en.subject.pdf
+en.subject.pdf

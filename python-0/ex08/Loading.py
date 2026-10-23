@@ -1,7 +1,7 @@
 import os
 
 
-def ft_tqdm(lst: range) -> None:
+def ft_tqdm(lst: range):
     """ progress loading bar with yield """
     size = os.get_terminal_size()
     block = size.columns - 20
@@ -14,3 +14,4 @@ def ft_tqdm(lst: range) -> None:
         progress = f"{i + 1}/{total}"
         print(f"\r{percent:>4}|[{bar}>{sp}]| {progress}", end="", flush=True)
         yield i
+
