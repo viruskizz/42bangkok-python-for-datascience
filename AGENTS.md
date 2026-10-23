@@ -50,5 +50,5 @@ Use the relevant `*.en.subject.pdf` as the authoritative project requirements. R
 ## Learning & Language Rules
 
 - Give explanations and hints first. Do not reveal solution code unless explicitly requested.
-- Never create or edit exercise code for the learner. Show requested code previews only in chat; the learner implements them.
+- Never create or edit Python source files (`*.py`) for the learner, including exercise and tester files; the learner implements those files. When explicitly requested, code examples may be included in non-Python documentation artifacts such as Markdown (`*.md`) and PDF (`*.pdf`) files, as well as shown in chat.
 - When Thai explanations are requested, explain in Thai while keeping technical terms in English.
