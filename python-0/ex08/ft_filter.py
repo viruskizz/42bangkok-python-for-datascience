@@ -11,6 +11,7 @@ def ft_filter(fn: Callable, lst: Iterable):
 
 
 def main():
+    """ test function """
     nums = [1, 2, 3, 4, 5, 6]
     filt = ft_filter(lambda x: x, nums)
     print(type(filt))

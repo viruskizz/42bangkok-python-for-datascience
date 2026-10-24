@@ -10,4 +10,5 @@ if len(sys.argv) == 2:
     except ValueError:
         print("AssertionError: argument is not an integer")
 else:
-    print("Assertion Error: more than one argument is provided")
+    if len(sys.argv) > 2:
+        print("AssertionError: more than one argument is provided")

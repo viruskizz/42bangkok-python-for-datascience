@@ -1,9 +1,9 @@
 import sys
 
 
-def get_code(s: str) -> str:
+def get_morse() -> dict:
     """ mapping character to morse code """
-    MORSE = {
+    return {
         " ": "/",
         "A": ".-",
         "B": "-...",
@@ -42,7 +42,20 @@ def get_code(s: str) -> str:
         "8": "---..",
         "9": "----.",
     }
+
+
+def get_code(s: str) -> str:
+    """ mapping character to morse code """
+    MORSE = get_morse()
     return MORSE[s.upper()]
+
+
+def is_valid_code(s: str) -> bool:
+    """ check if the string is valid for morse code """
+    for c in s:
+        if c.upper() not in get_morse():
+            return False
+    return True
 
 
 def encoding(s: str) -> str:
@@ -56,8 +69,7 @@ def main():
     try:
         assert len(sys.argv) == 2, "the arguments are bad"
         s = sys.argv[1]
-        for c in s:
-            assert c.isalnum() or c == " ", "the argument are bad"
+        assert is_valid_code(s), "the arguments are bad"
         m = encoding(s)
         print(m)
     except Exception as e:

@@ -3,7 +3,7 @@ import sys
 
 def get_alpha_type(c: str):
     """ return character type """
-    if c == " ":
+    if c.isspace():
         return "sp"
     elif c.isdigit():
         return "digit"
@@ -27,7 +27,7 @@ def building(s: str) -> None:
     for c in s:
         tp = get_alpha_type(c)
         counter[tp] += 1
-    print(f"the text contains {len(s)} characters")
+    print(f"The text contains {len(s)} characters:")
     print(f'{counter["upper"]} upper letters')
     print(f'{counter["lower"]} lower letters')
     print(f'{counter["punc"]} punctuation marks')
@@ -38,12 +38,14 @@ def building(s: str) -> None:
 def main():
     """ test function """
     try:
-        if len(sys.argv) == 2:
+        if len(sys.argv) == 2 and sys.argv[1] != "":
             data = sys.argv[1]
-        elif len(sys.argv) == 1:
+        elif len(sys.argv) == 1 or (len(sys.argv) == 2 and sys.argv[1] == ""):
+            print("What is the text to count?")
             inpt = sys.stdin.read()
-            inpt = inpt[:-1] + " "  # replace return caret with space
-            data = inpt.split("\n")[-1]  # Get only last line
+            if inpt.endswith("\n"):
+                inpt = inpt[:-1] + " "  # remove return caret
+            data = inpt
         else:
             msg = "AssertionError: more than one argument is provided"
             raise Exception(msg)
