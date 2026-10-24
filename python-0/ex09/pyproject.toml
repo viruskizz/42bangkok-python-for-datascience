@@ -1,10 +1,19 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=77.0.3", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "ft_package"
 version = "0.0.1"
-description = "ft starter package"
-authors = [{name="viruskizz", email="kizzaraiva@gmail.com"}]
+description = "A package that counts occurrences of a value in a list"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "viruskizz", email = "kizzaraiva@gmail.com"}
+]
+license = "MIT"
+license-files = ["LICENSE"]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/viruskizz/42bangkok-python-for-datascience"
