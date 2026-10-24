@@ -1,0 +1,10 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+
+# Subject PDFs
+*.en.subject.pdf
+en.subject.pdf
