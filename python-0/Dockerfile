@@ -11,6 +11,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN alias norminette=flake8
+RUN echo "alias norminette=flake8" >> ~/.bashrc
 
 CMD [ "sleep", "infinity" ]
