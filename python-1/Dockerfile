@@ -3,8 +3,9 @@ FROM python:3.10-slim
 # Update and install security patches
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt install -y x11-apps && \
-    apt-get clean
+    apt install -y x11-apps tk8.6 && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 

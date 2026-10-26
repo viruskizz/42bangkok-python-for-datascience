@@ -6,6 +6,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - DISPLAY=:0 # for home
+      - MPLBACKEND=TkAgg
     volumes:
       - ./:/app
       - /tmp/.X11-unix:/tmp/.X11-unix
