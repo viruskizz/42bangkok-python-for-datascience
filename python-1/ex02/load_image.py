@@ -3,7 +3,7 @@ import matplotlib.image as mpimg
 
 
 def ft_load(path: str) -> np.array:
-    """ load an image from the specified path and return it as a numpy array """
+    """ load an image from path and return numpy array """
     try:
         img = mpimg.imread(path)
         print("The shape of image is:", img.shape)
